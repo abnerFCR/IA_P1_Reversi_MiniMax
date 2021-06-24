@@ -1,0 +1,11 @@
+{
+  "name": "ia_proyecto1_clase",
+  "version": "1.0.0",
+  "description": "Proyecto 1 de Inteligencia Artificial, algoritmo Minimax",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abner Cardona",
+  "license": "ISC"
+}
