@@ -20,13 +20,13 @@ var Minimax = /** @class */ (function () {
             //create new node
             var nuevoNodo = this.ayudanteTablero.obtenerNuevoTableroDespuesDeMover(tablero, movimiento, jugador);
             //recursive call
-            var childScore = this.MMAB(nuevoNodo, jugador, profundidad - 1, false, -2147483648, 2147483647, e);
-            if (childScore > mejorPuntuacion) {
-                mejorPuntuacion = childScore;
+            var puntuacionHijo = this.MMAB(nuevoNodo, jugador, profundidad - 1, false, -2147483648, 2147483647, e);
+            if (puntuacionHijo > mejorPuntuacion) {
+                mejorPuntuacion = puntuacionHijo;
                 mejorMovimiento = movimiento;
             }
         }
-        console.log("Nodes Explored : " + this.nodosExplorados);
+        console.log("Nodos Explorados : " + this.nodosExplorados);
         return mejorMovimiento;
     };
     //returns minimax value for a given node with A/B pruning

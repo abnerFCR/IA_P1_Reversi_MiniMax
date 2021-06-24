@@ -1,8 +1,12 @@
 var express = require('express');
+var Minimax = require('Minimax');
 
 var app = express();
 
 app.get('/', function (req, res) {
+    //1 -> blanco (Jugador 1) -> 2
+    //0 -> negro  (Jugador 2) -> 1
+    //2 -> espacio blanco     -> 0
     console.log(req.url);
     let url = req.url.toString().substring(2,req.url.length);
     let partes = url.split('&');
@@ -10,7 +14,10 @@ app.get('/', function (req, res) {
     let estado = partes[1].substring(7,partes[1].length);
     console.log('turno:', turno);
     console.log('estado:', estado);
-    res.send('15');
+
+    Minimax.resolver();
+
+    res.send('24');
 })
 
 app.get('/informacion', function (req, res) {

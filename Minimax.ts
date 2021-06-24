@@ -24,13 +24,13 @@ export class Minimax {
             //create new node
             let nuevoNodo:number[][] = this.ayudanteTablero.obtenerNuevoTableroDespuesDeMover(tablero,movimiento,jugador);
             //recursive call
-            let childScore:number = this.MMAB(nuevoNodo,jugador,profundidad-1,false,-2147483648,2147483647,e);
-            if(childScore > mejorPuntuacion) {
-                mejorPuntuacion = childScore;
+            let puntuacionHijo:number = this.MMAB(nuevoNodo,jugador,profundidad-1,false,-2147483648,2147483647,e);
+            if(puntuacionHijo > mejorPuntuacion) {
+                mejorPuntuacion = puntuacionHijo;
                 mejorMovimiento = movimiento;
             }
         }
-        console.log("Nodes Explored : " + this.nodosExplorados);
+        console.log("Nodos Explorados : " + this.nodosExplorados);
         return mejorMovimiento;
     }
 
