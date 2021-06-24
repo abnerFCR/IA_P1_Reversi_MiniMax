@@ -38,7 +38,7 @@ app.get('/', function (req, res) {
     }
     let minimax = new Minimax.Minimax();
 
-    evaluator = new EvaluadorDinamico.EvaluadorDinamico();
+    evaluador = new EvaluadorDinamico.EvaluadorDinamico();
 
     let respuesta = minimax.resolver(tablero,turno,6,evaluador);
     console.log(turno);
