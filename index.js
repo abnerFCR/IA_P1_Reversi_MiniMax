@@ -40,7 +40,7 @@ app.get('/', function (req, res) {
 
     evaluador = new EvaluadorDinamico.EvaluadorDinamico();
 
-    let respuesta = minimax.resolver(tablero,turno,6,evaluador);
+    let respuesta = minimax.resolver(tablero,turnoN,6,evaluador);
     console.log(turno);
     console.log(tablero);
     console.log(respuesta.x+','+respuesta.y);
