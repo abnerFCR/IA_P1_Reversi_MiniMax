@@ -4,7 +4,7 @@ var app = express();
 
 app.get('/', function (req, res) {
     console.log(req.url);
-    let url = req.url.substring(2,req.url.length);
+    let url = req.url.toString().substring(2,req.url.length);
     let partes = url.split('&');
     let turno = partes[0].substring(6,partes[0].length);
     let estado = partes[1].substring(7,partes[1].length);
