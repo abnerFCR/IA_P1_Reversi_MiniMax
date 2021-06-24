@@ -43,7 +43,8 @@ app.get('/', function (req, res) {
     let respuesta = minimax.resolver(tablero,turno,6,evaluador);
     console.log(turno);
     console.log(tablero);
-    res.send(respuesta.toString());
+    console.log(respuesta.x+','+respuesta.y);
+    res.send(respuesta.x+''+respuesta.y);
 })
 
 app.get('/informacion', function (req, res) {
