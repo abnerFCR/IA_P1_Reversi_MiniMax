@@ -5,10 +5,10 @@ var app = express();
 app.get('/', function (req, res) {
     const {
         turno, estado
-    }=req.params;
+    }=req.path;
 
     console.log('Turno: ', turno);
-    console.log('Estado', estado);
+    console.log('Estado: ', estado);
     res.send('11');
 })
 
