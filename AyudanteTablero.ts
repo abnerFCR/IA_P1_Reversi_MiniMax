@@ -3,7 +3,7 @@ import { Point } from "./Point";
 export class AyudanteTablero{
 
     AyudanteTablero(){
-        
+
     }
 
     public finalizoElJuego(tablero:number[][]):boolean{
@@ -279,5 +279,25 @@ export class AyudanteTablero{
         }
 
         return nuevoTablero;
+    }
+
+    public obtenerTotalPiezas(tablero:number[][]):number{
+        let c = 0;
+        for (let i = 0; i < 8; i++) {
+            for (let j = 0; j < 8; j++) {
+                if(tablero[i][j] != 0) c++;
+            }
+        }
+        return c;
+    }
+
+    public obtenerTotalPiezasJugador(tablero:number[][], jugador:number):number{
+        let score = 0;
+        for (let i = 0; i < 8; i++) {
+            for (let j = 0; j < 8; j++) {
+                if(tablero[i][j] == jugador) score++;
+            }
+        }
+        return score;
     }
 }

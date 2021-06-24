@@ -255,6 +255,26 @@ var AyudanteTablero = /** @class */ (function () {
         }
         return nuevoTablero;
     };
+    AyudanteTablero.prototype.obtenerTotalPiezas = function (tablero) {
+        var c = 0;
+        for (var i = 0; i < 8; i++) {
+            for (var j = 0; j < 8; j++) {
+                if (tablero[i][j] != 0)
+                    c++;
+            }
+        }
+        return c;
+    };
+    AyudanteTablero.prototype.obtenerTotalPiezasJugador = function (tablero, jugador) {
+        var score = 0;
+        for (var i = 0; i < 8; i++) {
+            for (var j = 0; j < 8; j++) {
+                if (tablero[i][j] == jugador)
+                    score++;
+            }
+        }
+        return score;
+    };
     return AyudanteTablero;
 }());
 exports.AyudanteTablero = AyudanteTablero;

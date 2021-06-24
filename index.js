@@ -1,5 +1,7 @@
 var express = require('express');
-//var Minimax = require('Minimax');
+var Minimax = require("./Minimax");
+var Evaluador = require("./Evaluador");
+var EvaluadorDinamico = require("./EvaluadorDinamico");
 
 var app = express();
 
@@ -34,11 +36,14 @@ app.get('/', function (req, res) {
         }
         tablero.push(fila);
     }
-    //Minimax.resolver();
+    let minimax = new Minimax.Minimax();
+
+    evaluator = new EvaluadorDinamico.EvaluadorDinamico();
+
+    let respuesta = minimax.resolver(tablero,turno,6,evaluador);
     console.log(turno);
     console.log(tablero);
-
-    res.send('24');
+    res.send(respuesta.toString());
 })
 
 app.get('/informacion', function (req, res) {

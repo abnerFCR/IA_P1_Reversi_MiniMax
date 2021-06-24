@@ -35,7 +35,7 @@ var Minimax = /** @class */ (function () {
         //if terminal reached or depth limit reached evaluate
         if (profundidad == 0 || this.ayudanteTablero.finalizoElJuego(nodo)) {
             //BoardPrinter bpe = new BoardPrinter(node,"Depth : " + depth);
-            return e.eval(nodo, jugador);
+            return e.evaluar(nodo, jugador);
         }
         var oJugador = (jugador == 1) ? 2 : 1;
         //if no moves available then forfeit turn

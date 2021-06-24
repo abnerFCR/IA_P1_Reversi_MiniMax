@@ -1,3 +1,8 @@
 export interface Evaluador{
-    eval(tablero:number[][],player:number):number;
+    evaluar(tablero:number[][],jugador:number):number;
+}
+export enum FaseJuego {
+    INICIO,
+    MEDIO,
+    FINAL
 }
