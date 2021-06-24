@@ -3,8 +3,12 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-    console.log('Turno: ', req.params.turno);
-    console.log('Estado', req.params.estado);
+    const {
+        turno, estado
+    }=req.params;
+
+    console.log('Turno: ', turno);
+    console.log('Estado', estado);
     res.send('11');
 })
 
