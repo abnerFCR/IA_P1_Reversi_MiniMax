@@ -13,4 +13,5 @@ app.get('/informacion', function (req, res) {
   console.log("Informacion");
 })
 
-app.listen(3001);
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
