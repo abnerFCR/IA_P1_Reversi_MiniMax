@@ -1,5 +1,5 @@
 var express = require('express');
-var Minimax = require('Minimax');
+//var Minimax = require('Minimax');
 
 var app = express();
 
@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
     console.log('turno:', turno);
     console.log('estado:', estado);
 
-    Minimax.resolver();
+    //Minimax.resolver();
 
     res.send('24');
 })
