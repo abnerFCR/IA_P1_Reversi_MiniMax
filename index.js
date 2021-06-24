@@ -3,8 +3,8 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-    console.log(req);
-    res.send('12');
+    console.log(req.url);
+    res.send('13');
 })
 
 app.get('/informacion', function (req, res) {
