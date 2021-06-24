@@ -4,7 +4,9 @@ var app = express();
 
 app.get('/', function (req, res) {
     console.log(req.url);
-    res.send('13');
+    console.log(req.url.turno)
+    console.log(req.url.estado)
+    res.send('14');
 })
 
 app.get('/informacion', function (req, res) {
