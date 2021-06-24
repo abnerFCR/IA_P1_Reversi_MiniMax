@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
         for(let j = 0; j<8; j++){
             if(estado[posicion] == '1'){
                 fila.push(1);
-            }else if(estado[posicion=='2']){
+            }else if(estado[posicion]=='2'){
                 fila.push(0);
             }else{
                 fila.push(2);
@@ -36,11 +36,7 @@ app.get('/', function (req, res) {
     }
     //Minimax.resolver();
     console.log(turno);
-    for(let i = 0; i<8; i++){
-        for(let j = 0; j<8; j++){
-            console.log(tablero[i][j]);
-        }
-    }
+    console.log(tablero);
 
     res.send('24');
 })
