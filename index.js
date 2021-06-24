@@ -4,9 +4,13 @@ var app = express();
 
 app.get('/', function (req, res) {
     console.log(req.url);
-    console.log(req.url.turno)
-    console.log(req.url.estado)
-    res.send('14');
+    let url = req.url.substring(2,req.url.length);
+    let partes = url.split('&');
+    let turno = partes[0].substring(6,partes[0].length);
+    let estado = partes[1].substring(7,partes[1].length);
+    console.log('turno:', turno);
+    console.log('estado:', estado);
+    res.send('15');
 })
 
 app.get('/informacion', function (req, res) {
